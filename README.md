@@ -51,38 +51,69 @@ If the control input changes to AB = 10, then all the gates are restricted excep
 
 
 
-### PROGRAM 
+### PROGRAM
+### Multiplexer
 /*
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
+Developed by: KAVIYA SHREE S
+RegisterNumber: 212222110018
 */
+module mul(I0,I1,I2,I3,S0,S1,Y);
+input I0,I1,I2,I3,S0,S1;
+output Y;
+wire P,Q,R,S,S0c,S1c;
+not(S0c,S0);
+nor(S1c,S1);
+and (P,S0c,S1c,I0);
+and(Q,S0c,S1,I1);
+and(R,S0,S1c,I2);
+and(S,S0,S1,I3);
+or(Y,P,Q,R,S);
+endmodule
 
 
-
-
+### PROGRAM
+### De-Multiplexer
+/*
+Program for flipflops  and verify its truth table in quartus using Verilog programming.
+Developed by: KAVIYA SHREE S
+RegisterNumber: 212222110018
+*/
+module demul(Y0,Y1,Y2,Y3,S0,S1,I);
+input I,S0,S1;
+output Y0,Y1,Y2,Y3;
+wire S0c,S1c;
+not(S0c,S0);
+nor(S1c,S1);
+and (Y0,I,S0c,S1c);
+and(Y1,I,S0c,S1);
+and(Y2,I,S0,S1c);
+and(Y3,I,S0,S1);
+endmodule
 
 
 ### RTL LOGIC  
+### Multiplexer:
+![image](https://github.com/kaviya2839/Exercise-07-Multiplexer-and-De-multiplexer/assets/120553351/7ec3b7d1-3667-47ad-ad26-97d4dab451b1)
 
-
-
-
-
-
+### De-Multiplexer:
+![image](https://github.com/kaviya2839/Exercise-07-Multiplexer-and-De-multiplexer/assets/120553351/bc732b7e-3456-47ae-bdcb-f4766a7f8e3e)
 
 
 ### TIMING DIGRAMS  
+### Multiplexer:
+![image](https://github.com/kaviya2839/Exercise-07-Multiplexer-and-De-multiplexer/assets/120553351/716fde9a-6378-465f-b5aa-97ef0c4ce4ed)
 
-
-
+### De-Multiplexer:
+![image](https://github.com/kaviya2839/Exercise-07-Multiplexer-and-De-multiplexer/assets/120553351/3dc67ac1-c56b-4240-a494-d98a84cf5d9b)
 
 
 ### TRUTH TABLE 
+### Multiplexer:
 
-
-
-
-
+![image](https://github.com/kaviya2839/Exercise-07-Multiplexer-and-De-multiplexer/assets/120553351/322d2afe-abf5-4ba4-93ce-677b6c23f226)
+### De-Multiplexer:
+![image](https://github.com/kaviya2839/Exercise-07-Multiplexer-and-De-multiplexer/assets/120553351/c649aa45-adc3-40aa-910c-086f6f384361)
 
 ### RESULTS 
+Therefore 4X1 multiplexer and 1X4 de multiplexer are successfully implemented using verilog and validate its outputs
