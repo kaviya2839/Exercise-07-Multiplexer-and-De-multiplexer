@@ -47,7 +47,7 @@ If the control input changes to AB = 10, then all the gates are restricted excep
  
  
 ### Procedure
-/* write all the steps invloved */
+
 ### STEP 1
 Start the module using module projname().
 ### STEP 2
@@ -114,7 +114,7 @@ endmodule
 
 ### TIMING DIGRAMS  
 ### Multiplexer:
-![image](https://github.com/kaviya2839/Exercise-07-Multiplexer-and-De-multiplexer/assets/120553351/716fde9a-6378-465f-b5aa-97ef0c4ce4ed)
+![image](https://github.com/kaviya2839/Exercise-07-Multiplexer-and-De-multiplexer/assets/120553351/65bdc304-6b18-4520-a057-a6075bf4d5bc)
 
 ### De-Multiplexer:
 ![image](https://github.com/kaviya2839/Exercise-07-Multiplexer-and-De-multiplexer/assets/120553351/3dc67ac1-c56b-4240-a494-d98a84cf5d9b)
